@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-print(ord('A'))
-print(ord('a'))
-print(ord('中'))
-print(chr(66))
-print(chr(25992))
-print('\u4e2d\u6587')
-print('ABC'.encode('ascii'))
-print('中文'.encode('utf-8'))
-print(b'ABC'.decode('ascii'))
-print(b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8'))
-print(len(b'ABC'))
-print(len('ABC'))
-print(len('中文'))
-print(len('\xe4\xb8\xad\xe6\x96\x87'))
+names = ['Michael', 'Bob', 'Tracy']
+for name in names:
+    print(name)
+
+sum = 0
+for x in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+    sum = sum + x
+print(sum)
+
+sum = 0
+for x in range(101):
+    sum = sum + x
+print(sum)
