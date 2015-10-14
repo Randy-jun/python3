@@ -37,6 +37,6 @@ def move(n, a, b, c):
     print('move', a, '---->', c)
     move(n - 1, b, a, c)
 t_start = time.clock()
-move(50, 'A', 'B', 'C')
+move(20, 'A', 'B', 'C')
 t_end = time.clock()
 print(t_end - t_start)

@@ -20,11 +20,11 @@ void move(int n, char a, char b, char c)
 int main()
 {
 	time_t t_start, t_end;
-	int n = 50;
+	int n = 20;
 	char a, b, c;
 	t_start = clock();
 	move(n, 'A', 'B', 'C');
 	t_end = clock();
-	printf("Time: %.0f s\n", difftime(t_end, t_start));
+	printf("Time: %.0f s\n", difftime(t_end, t_start) / CLOCKS_PER_SEC);
 	return 0;
 }
