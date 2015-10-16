@@ -77,16 +77,16 @@ def triangles():
     L.append(1)
     yield(L)
     while True:
-        L1 = L
-        print(list(range(len(L1) - 1)),'len')
+        L1 = tuple(L)
         for n in range(len(L1) - 1):
-            print(L1)
             L[n + 1] = L1[n] + L1[n + 1]
-            print(L)
         L.append(1)
         yield(L)
 
+# 上面这个方法法不是空间最优的会消耗2倍左右内存
+# l如果是个list，L = l后，如果改变l的值，L也会一起改变
+
 tri = triangles()
-for x in range(10):
+for x in range(15):
     print(next(tri))
 
