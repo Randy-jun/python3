@@ -66,4 +66,14 @@ def is_palindrome(n):
         str2 = strl[: n - 1: -1] # 字符转str[:b:-1]除去str[0]到str[b]剩下的反转
     return str1 == str2
 
-print(list(filter(is_palindrome, range(1, 10000000))))
+print(list(filter(is_palindrome, range(1, 100000))))
+
+print('=================================')
+def is_palindromea(n):
+    strl = str(n)
+    n = len(strl) // 2
+    str1 = strl[: n]
+    str2 = (strl[:: -1])[: n]
+    return str1 == str2
+
+print(list(filter(is_palindromea, range(1, 100000))))
