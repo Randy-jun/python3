@@ -14,3 +14,30 @@ Python解释器自己会把实例变量传进去。
 和普通函数相比，在类中定义的函数只有一点不同，就是第一个参数永远是
 实例变量self,并且调用时不用传递参数
 """
+
+class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print('%s : %s' % (self.name, self.score))
+
+    def get_grade(self):
+        if self.score >= 90:
+            return 'A'
+        elif self.score >= 60:
+            return 'B'
+        else:
+            return 'C'
+
+bart = Student('Bart Simposn', 59)
+lisa = Student('Lisa Simpson', 88)
+
+print('bart.name = ', bart.name)
+print('bart.score = ', bart.score)
+bart.print_score()
+
+print('grade of Bart: ', bart.get_grade())
+print('grade of Lisa: ', lisa.get_grade())
