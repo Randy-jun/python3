@@ -86,3 +86,8 @@ print(obj.y)
 #传入一个默认值
 print(getattr(obj, 'z', 404))
 
+print(hasattr(obj, 'power'))
+print(getattr(obj, 'power'))
+fn1 = getattr(obj, 'power')
+print(fn1)
+print(fn1())
