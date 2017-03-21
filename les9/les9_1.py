@@ -1,6 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# 错误、调试和测试
+
+try:
+    print('try...')
+    r = 10 / 0
+   # r = 10 / 2
+    print('result:', r)
+except ZeroDivisionError as e:
+    print('except:', e)
+finally:
+    print('finally...')
+print('END')
+
+##################################    重复了   ################################
+
 # 使用元类
 
 #class Hello(object):
@@ -144,3 +159,4 @@ class User(Model):
 
 u = User(id = 12345, name = 'Randy', email = 'Randy@test.com', password = 'my-pwd')
 u.save()
+##################################    重复了   ################################
